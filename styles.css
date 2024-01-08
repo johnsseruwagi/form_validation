@@ -46,13 +46,14 @@ form button {
 }
 
 
-.invalid {
-    border-color: red;
-    background-color: #ffe6e6;
-}
 .valid {
     border-color: #008000FF;
     background-color: #e6ffe6;
+}
+
+.invalid {
+    border-color: #FF0000FF;
+    background-color: #ffe6e6;
 }
 .error-message {
     color: #FF0000FF;
@@ -62,6 +63,13 @@ form button {
     margin-bottom: 10px;
 }
 
+small{
+    display: none;
+}
+
+.show{
+    display: inline-block;
+}
 @media screen and (max-width: 420px) {
     .container {
         width: 90%;

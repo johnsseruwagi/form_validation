@@ -1,45 +1,47 @@
 <!DOCTYPE html>
-
 <html lang="en">
+
 <head>
-   <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css"/>
+    <link rel="stylesheet" href="styles.css" />
     <title>Form Validator</title>
 </head>
+
 <body>
 <div class="container">
-    <form  class="form" id="userForm">
+    <form class="form" id="userForm">
         <h2>Register With Us</h2>
         <div class="form-control">
-            <label for="username" >Username</label>
+            <label for="username">Username</label>
             <input type="text" id="username" placeholder="Enter Username">
-            <small>Error Message</small>
+            <small class="error-message">Invalid username (minimum 3 characters)</small>
         </div>
         <div class="form-control">
-            <label for="email" >Email</label>
+            <label for="email">Email</label>
             <input type="email" id="email" placeholder="Enter Email">
-            <small>Error Message</small>
+            <small class="error-message">Invalid email format</small>
         </div>
         <div class="form-control">
-            <label for="password" >Password</label>
+            <label for="password">Password</label>
             <input type="password" id="password" placeholder="Enter Password">
-            <small>Error Message</small>
+            <small class="error-message">Invalid password (minimum 8 characters, uppercase, special character, digit)</small>
         </div>
         <div class="form-control">
-            <label for="password2" >Confirm Password</label>
-            <input type="password" id="password2" placeholder="Enter Password">
-            <small>Error Message</small>
+            <label for="password2">Confirm Password</label>
+            <input type="password" id="password2" placeholder="Re-enter Password">
+            <small class="error-message">Passwords do not match</small>
         </div>
 
-        <button type="submit" >Register</button>
+        <button type="submit">Register</button>
         <p id="error-message"></p>
 
     </form>
 
 </div>
 
-<!--add javascript -->
+<!-- Add JavaScript -->
 <script src="script.js"></script>
 </body>
+
 </html>
