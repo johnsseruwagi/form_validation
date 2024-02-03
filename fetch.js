@@ -1,14 +1,20 @@
 
 
 const getData = async() =>{
+    const _data = {
+        title: "foo",
+        body: "bar",
+        userId:1
+    }
    try{
-       const response = await fetch('https://api.github.com/users/manishmshiva',{
-           method:"GET",
+       const response = await fetch('https://jsonplaceholder.typicode.com/posts',{
+           method:"POST",
+           body:JSON.stringify(_data),
            headers:{"Content-type":"application/json;charset=UTF-8"},
 
        });
        console.log(response);
-       if(response.status !== 200){
+       if(response.status !== 201){
            return;
        }
        const data = await response.json();
